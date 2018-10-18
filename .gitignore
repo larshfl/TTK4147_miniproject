@@ -55,8 +55,9 @@ dkms.conf
 
 # Own ignores
 
-./build/CMakeFiles/*
-./build/CMakeCache.txt
-./build/Sanntid_miniproject/*
-./build/cmake_install.cmake
-./build/Makefile
+build/CMakeFiles/*
+build/CMakeCache.txt
+build/Sanntid_miniproject/*
+build/cmake_install.cmake
+build/Makefile
+
