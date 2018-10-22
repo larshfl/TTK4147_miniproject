@@ -4,6 +4,7 @@ project(Sanntid_miniproject)
 
 include_directories (../src/ )
 include_directories (../miniproject-files/network/ )
+set(CMAKE_C_COMPILER /home/student/Desktop/buildroot/output/staging/usr/bin/avr32-linux-gcc-4.2.4)
 
 
 

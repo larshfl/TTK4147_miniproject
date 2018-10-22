@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/student/Desktop/TTK4147_miniproject/build
+CMAKE_SOURCE_DIR = /home/student/Desktop/jorn_og_lars/TTK4147_miniproject/build
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/student/Desktop/TTK4147_miniproject/build
+CMAKE_BINARY_DIR = /home/student/Desktop/jorn_og_lars/TTK4147_miniproject/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Sanntid_miniproject.dir/depend.make
@@ -46,62 +46,62 @@ include CMakeFiles/Sanntid_miniproject.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Sanntid_miniproject.dir/flags.make
 
-CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/src/main.c.o: CMakeFiles/Sanntid_miniproject.dir/flags.make
-CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/src/main.c.o: /home/student/Desktop/TTK4147_miniproject/src/main.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/student/Desktop/TTK4147_miniproject/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/src/main.c.o"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/src/main.c.o   -c /home/student/Desktop/TTK4147_miniproject/src/main.c
+CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.o: CMakeFiles/Sanntid_miniproject.dir/flags.make
+CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.o: /home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/student/Desktop/jorn_og_lars/TTK4147_miniproject/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.o"
+	/home/student/Desktop/buildroot/output/staging/usr/bin/avr32-linux-gcc-4.2.4  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.o   -c /home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c
 
-CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/src/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/src/main.c.i"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/student/Desktop/TTK4147_miniproject/src/main.c > CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/src/main.c.i
+CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.i"
+	/home/student/Desktop/buildroot/output/staging/usr/bin/avr32-linux-gcc-4.2.4  $(C_DEFINES) $(C_FLAGS) -E /home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c > CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.i
 
-CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/src/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/src/main.c.s"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/student/Desktop/TTK4147_miniproject/src/main.c -o CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/src/main.c.s
+CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.s"
+	/home/student/Desktop/buildroot/output/staging/usr/bin/avr32-linux-gcc-4.2.4  $(C_DEFINES) $(C_FLAGS) -S /home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c -o CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.s
 
-CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/src/main.c.o.requires:
-.PHONY : CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/src/main.c.o.requires
+CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.o.requires:
+.PHONY : CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.o.requires
 
-CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/src/main.c.o.provides: CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/src/main.c.o.requires
-	$(MAKE) -f CMakeFiles/Sanntid_miniproject.dir/build.make CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/src/main.c.o.provides.build
-.PHONY : CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/src/main.c.o.provides
+CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.o.provides: CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.o.requires
+	$(MAKE) -f CMakeFiles/Sanntid_miniproject.dir/build.make CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.o.provides.build
+.PHONY : CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.o.provides
 
-CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/src/main.c.o.provides.build: CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/src/main.c.o
+CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.o.provides.build: CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.o
 
-CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c.o: CMakeFiles/Sanntid_miniproject.dir/flags.make
-CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c.o: /home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/student/Desktop/TTK4147_miniproject/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c.o"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c.o   -c /home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c
+CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.o: CMakeFiles/Sanntid_miniproject.dir/flags.make
+CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.o: /home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/student/Desktop/jorn_og_lars/TTK4147_miniproject/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.o"
+	/home/student/Desktop/buildroot/output/staging/usr/bin/avr32-linux-gcc-4.2.4  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.o   -c /home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c
 
-CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c.i"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -E /home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c > CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c.i
+CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.i"
+	/home/student/Desktop/buildroot/output/staging/usr/bin/avr32-linux-gcc-4.2.4  $(C_DEFINES) $(C_FLAGS) -E /home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c > CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.i
 
-CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c.s"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -S /home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c -o CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c.s
+CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.s"
+	/home/student/Desktop/buildroot/output/staging/usr/bin/avr32-linux-gcc-4.2.4  $(C_DEFINES) $(C_FLAGS) -S /home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c -o CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.s
 
-CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c.o.requires:
-.PHONY : CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c.o.requires
+CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.o.requires:
+.PHONY : CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.o.requires
 
-CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c.o.provides: CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c.o.requires
-	$(MAKE) -f CMakeFiles/Sanntid_miniproject.dir/build.make CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c.o.provides.build
-.PHONY : CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c.o.provides
+CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.o.provides: CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.o.requires
+	$(MAKE) -f CMakeFiles/Sanntid_miniproject.dir/build.make CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.o.provides.build
+.PHONY : CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.o.provides
 
-CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c.o.provides.build: CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c.o
+CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.o.provides.build: CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.o
 
 # Object files for target Sanntid_miniproject
 Sanntid_miniproject_OBJECTS = \
-"CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/src/main.c.o" \
-"CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c.o"
+"CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.o" \
+"CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.o"
 
 # External object files for target Sanntid_miniproject
 Sanntid_miniproject_EXTERNAL_OBJECTS =
 
-Sanntid_miniproject/Sanntid_miniproject: CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/src/main.c.o
-Sanntid_miniproject/Sanntid_miniproject: CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c.o
+Sanntid_miniproject/Sanntid_miniproject: CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.o
+Sanntid_miniproject/Sanntid_miniproject: CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.o
 Sanntid_miniproject/Sanntid_miniproject: CMakeFiles/Sanntid_miniproject.dir/build.make
 Sanntid_miniproject/Sanntid_miniproject: CMakeFiles/Sanntid_miniproject.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C executable Sanntid_miniproject/Sanntid_miniproject"
@@ -111,8 +111,8 @@ Sanntid_miniproject/Sanntid_miniproject: CMakeFiles/Sanntid_miniproject.dir/link
 CMakeFiles/Sanntid_miniproject.dir/build: Sanntid_miniproject/Sanntid_miniproject
 .PHONY : CMakeFiles/Sanntid_miniproject.dir/build
 
-CMakeFiles/Sanntid_miniproject.dir/requires: CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/src/main.c.o.requires
-CMakeFiles/Sanntid_miniproject.dir/requires: CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c.o.requires
+CMakeFiles/Sanntid_miniproject.dir/requires: CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.o.requires
+CMakeFiles/Sanntid_miniproject.dir/requires: CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.o.requires
 .PHONY : CMakeFiles/Sanntid_miniproject.dir/requires
 
 CMakeFiles/Sanntid_miniproject.dir/clean:
@@ -120,6 +120,6 @@ CMakeFiles/Sanntid_miniproject.dir/clean:
 .PHONY : CMakeFiles/Sanntid_miniproject.dir/clean
 
 CMakeFiles/Sanntid_miniproject.dir/depend:
-	cd /home/student/Desktop/TTK4147_miniproject/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/student/Desktop/TTK4147_miniproject/build /home/student/Desktop/TTK4147_miniproject/build /home/student/Desktop/TTK4147_miniproject/build /home/student/Desktop/TTK4147_miniproject/build /home/student/Desktop/TTK4147_miniproject/build/CMakeFiles/Sanntid_miniproject.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/student/Desktop/jorn_og_lars/TTK4147_miniproject/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/student/Desktop/jorn_og_lars/TTK4147_miniproject/build /home/student/Desktop/jorn_og_lars/TTK4147_miniproject/build /home/student/Desktop/jorn_og_lars/TTK4147_miniproject/build /home/student/Desktop/jorn_og_lars/TTK4147_miniproject/build /home/student/Desktop/jorn_og_lars/TTK4147_miniproject/build/CMakeFiles/Sanntid_miniproject.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Sanntid_miniproject.dir/depend
 
