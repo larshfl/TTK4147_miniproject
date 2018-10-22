@@ -5,7 +5,7 @@ project(Sanntid_miniproject)
 include_directories (../src/ )
 include_directories (../miniproject-files/network/ )
 
-
+set(CMAKE_C_COMPILER ~/Desktop/buildroot/output/staging/usr/bin/avr32-linux-gcc-4.2.4 )
 
 
 file (GLOB_RECURSE PROJECT_HEADERS ../src/*.h  ../miniproject-files/network/*.h)
