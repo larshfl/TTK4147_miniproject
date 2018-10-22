@@ -4,6 +4,6 @@
 CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c.o: /home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c
 CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.c.o: /home/student/Desktop/TTK4147_miniproject/miniproject-files/network/udp.h
 
-CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/src/main.c.o: ../miniproject-files/network/udp.h
+CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/src/main.c.o: /home/student/Desktop/TTK4147_miniproject/src/../miniproject-files/network/udp.h
 CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/TTK4147_miniproject/src/main.c.o: /home/student/Desktop/TTK4147_miniproject/src/main.c
 
