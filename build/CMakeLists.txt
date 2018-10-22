@@ -21,7 +21,9 @@ source_group ("headers" FILES ${PROJECT_HEADERS})
 source_group ("sources" FILES ${PROJECT_SOURCES})
 
 # set(SELF_MADE_FLAGS " -std=gnu11 -pthread -lm -lcomedi")
-set(SELF_MADE_FLAGS " -std=gnu11 -pthread -lm")
+# set(SELF_MADE_FLAGS " -std=gnu11 -pthread -lm")
+set(SELF_MADE_FLAGS "")
+
 
 add_definitions(${SELF_MADE_FLAGS})
 # SET(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${SELF_MADE_FLAGS}")
