@@ -9,7 +9,7 @@ include_directories (../miniproject-files/network/ )
 
 
 file (GLOB_RECURSE PROJECT_HEADERS ../src/*.h  ../miniproject-files/network/*.h)
-file (GLOB_RECURSE PROJECT_SOURCES ../src/*.c  ../miniproject-files/network/*.c)
+file (GLOB_RECURSE PROJECT_SOURCES ../src/main.c  ../miniproject-files/network/*.c)
 file (GLOB         PROJECT_CONFIGS CMakeLists.txt
                                   .gitmodules)
 
