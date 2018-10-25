@@ -62,3 +62,4 @@ build/cmake_install.cmake
 build/Makefile
 
 src/main.c~
+utilities/OUTPUT_DATA
