@@ -84,39 +84,38 @@ int main(){
 
 	double y,P,dt, oldT;
 	double u; 
-	 
-	
-	
+	printf("START\n"); 
 		
 	while(1) {
 
 		
 
 		udpconn_send(conn, "GET");
-		usleep(10); 
-		dt = 10; 
+		usleep(1000); 
+		dt = 0.001; 
 		udpconn_receive(conn,rcv_buff,buflen);
-		printf("main got %s \n", rcv_buff);
 		
-		y = str2long(rcv_buff+8);
+		y = atof(rcv_buff + 8);
 		printf("rcv buff: %s \n", rcv_buff);  
 		P = y;
-		I+= (y*dt)/1000000;
+		I+= (y*dt);
 		u = P*Kp + (I*Ki);
-		l2s((-u), send_buff);
+
+		snprintf(send_buff, 100, "%lf", (-u));
 
 		udpconn_send(conn, send_buff);
-		printf("y: %i\n", (int)y); 
-		printf("P: %i\n",(int)P); 
-		printf("I: %i\n",(int)I);
-		printf("u: %u\n",(int)u);  
+		printf("y: %lf\n", y); 
+		printf("P: %lf\n",P); 
+		printf("I: %lf\n",I);
+		printf("u: %lf\n",u);  
 		
 
-		char cp[] = "123.34";
-		double t =  atof(cp + 1);
-		printf("s2d: %lf \n", t);
-		snprintf(send_buff, 100, "%lf", t);
-		printf("string buffer %s \n",cp);
+
+//		char cp[] = "123.34";
+//		double t =  atof(cp + 1);
+	//	printf("s2d: %lf \n", t);
+	//	snprintf(send_buff, 100, "%lf", t);
+	//	printf("string buffer %s \n",cp);
 		
 	// reguler 
 
