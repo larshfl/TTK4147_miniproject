@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
+#include <string.h>
 #include <sys/types.h>
 
 
@@ -67,13 +68,15 @@ int main(){
 
 	char send_buff[100] = "sent";
 	int buflen = 100;
-	memcpy( send_buff, "sent", sizeof(char)*6);
+	memcpy( send_buff, "SET:", sizeof(char)*4);
 	// send_buff[0] = "sent";	
 
 	UDPConn* conn = udpconn_new("10.100.23.253", 9999);
 	char rcv_buff[100];;
 
 	
+		printf("START_DATA\n"); 
+
 
 	udpconn_send(conn, "START");
 	udpconn_send(conn, "GET");
@@ -88,14 +91,14 @@ int main(){
 
 	double y,P,dt, oldT;
 	double u; 
-	printf("START\n"); 
+
 		
 	while(1) {
 
 		
 
 		udpconn_send(conn, "GET");
-		usleep(1000); 
+	
 		dt = 0.001; 
 		udpconn_receive(conn,rcv_buff,buflen);
 		
@@ -105,16 +108,16 @@ int main(){
 		I+= (y*dt);
 		u = P*Kp + (I*Ki);
 
-		snprintf(send_buff, 100, "%lf", (-u));
-
+		snprintf(send_buff+4, 100, "%lf", (-u));
+		printf("send_buff: %s\n", send_buff); 
 		udpconn_send(conn, send_buff);
 		printf("y: %lf\n", y); 
 		printf("P: %lf\n",P); 
 		printf("I: %lf\n",I);
 		printf("u: %lf\n",u);  
+		usleep(1000*5); 
+
 		
-
-
 //		char cp[] = "123.34";
 //		double t =  atof(cp + 1);
 	//	printf("s2d: %lf \n", t);

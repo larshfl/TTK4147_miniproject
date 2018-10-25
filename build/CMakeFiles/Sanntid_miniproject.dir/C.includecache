@@ -19,6 +19,8 @@ stdlib.h
 -
 pthread.h
 -
+string.h
+-
 sys/types.h
 -
 
