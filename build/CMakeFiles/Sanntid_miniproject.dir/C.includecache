@@ -6,28 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c
-stdlib.h
--
-string.h
--
-unistd.h
--
-sys/types.h
--
-sys/socket.h
--
-netinet/in.h
--
-netdb.h
--
-udp.h
-/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.h
-
-/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.h
-arpa/inet.h
--
-
 /home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/../miniproject-files/network/udp.h
 arpa/inet.h
 -
@@ -36,6 +14,8 @@ arpa/inet.h
 ../miniproject-files/network/udp.h
 /home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/../miniproject-files/network/udp.h
 stdio.h
+-
+stdlib.h
 -
 pthread.h
 -

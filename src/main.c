@@ -1,5 +1,6 @@
 #include "../miniproject-files/network/udp.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include <pthread.h>
 #include <sys/types.h>
 
@@ -63,9 +64,8 @@ int main(){
 
 	
 
-	char send_buff[100];
+	char send_buff[100] = "sent";
 	int buflen = 100;
-	send_buff[0] = "sent";
 	char rcv_buff[100];;
 
 	
@@ -76,34 +76,30 @@ int main(){
 	printf("Q\n");
 	udpconn_receive(conn,rcv_buff,buflen);
 
-	long ref = 0;
-	long I = 0;
+	double ref = 0;
+	double I = 0;
 	
-	long Kp = 10;
-	long Ki = 800;
+	double Kp = 10;
+	double Ki = 800;
 
-	long y,P,dt, oldT;
-	long u; 
+	double y,P,dt, oldT;
+	double u; 
 	 
 	
 	
-	
-	// pthread_t threadHandle;
-	// pthread_create(&threadHandle, NULL, fn, NULL);
-
-	
-	
-	
+		
 	while(1) {
 
 		
-		printf("main got %s \n", rcv_buff);
+
 		udpconn_send(conn, "GET");
 		usleep(10); 
 		dt = 10; 
 		udpconn_receive(conn,rcv_buff,buflen);
+		printf("main got %s \n", rcv_buff);
 		
-		y = str2long(rcv_buff); 
+		y = str2long(rcv_buff+8);
+		printf("rcv buff: %s \n", rcv_buff);  
 		P = y;
 		I+= (y*dt)/1000000;
 		u = P*Kp + (I*Ki);
@@ -112,8 +108,15 @@ int main(){
 		udpconn_send(conn, send_buff);
 		printf("y: %i\n", (int)y); 
 		printf("P: %i\n",(int)P); 
-		printf("I: %i\n",(int)I); 
+		printf("I: %i\n",(int)I);
+		printf("u: %u\n",(int)u);  
 		
+
+		char cp[] = "123.34";
+		double t =  atof(cp + 1);
+		printf("s2d: %lf \n", t);
+		snprintf(send_buff, 100, "%lf", t);
+		printf("string buffer %s \n",cp);
 		
 	// reguler 
 
