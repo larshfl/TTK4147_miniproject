@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <pthread.h>
 #include <sys/types.h>
-
+#include "string.h"
 
 #define true	(1)
 #define false   (0)
