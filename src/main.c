@@ -8,6 +8,7 @@
 
 #define true	(1)
 #define false   (0)
+#define SLEEP_TIME_S (0.001)
 
 long str2long(char*s){
 	long out =0; 
@@ -64,7 +65,7 @@ void* fn(void* args){
 
 int main(){
 
-	
+
 
 	char send_buff[100] = "sent";
 	int buflen = 100;
@@ -88,8 +89,9 @@ int main(){
 	
 	double Kp = 10;
 	double Ki = 800;
+	double Kd = 0.001;
 
-	double y,P,dt, oldT;
+	double y,P,dt, oldT, y_old = 0;
 	double u; 
 
 		
@@ -99,14 +101,16 @@ int main(){
 
 		udpconn_send(conn, "GET");
 	
-		dt = 0.001; 
+		dt = SLEEP_TIME_S; 
 		udpconn_receive(conn,rcv_buff,buflen);
 		
 		y = atof(rcv_buff + 8);
 		printf("rcv buff: %s \n", rcv_buff);  
 		P = y;
 		I+= (y*dt);
-		u = P*Kp + (I*Ki);
+		u = P*Kp + (I*Ki) + (y - y_old)/SLEEP_TIME_S*Kd;
+		y_old = y; 
+
 
 		snprintf(send_buff+4, 100, "%lf", (-u));
 		printf("send_buff: %s\n", send_buff); 
@@ -115,7 +119,7 @@ int main(){
 		printf("P: %lf\n",P); 
 		printf("I: %lf\n",I);
 		printf("u: %lf\n",u);  
-		usleep(1000*5); 
+		usleep((int)(SLEEP_TIME_S*1000*1000*5)); 
 
 		
 //		char cp[] = "123.34";
