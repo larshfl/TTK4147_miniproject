@@ -6,6 +6,7 @@
 
 
 #define true	(1)
+#define false   (0)
 
 long str2long(char*s){
 	long out =0; 
@@ -66,10 +67,13 @@ int main(){
 
 	char send_buff[100] = "sent";
 	int buflen = 100;
+	memcpy( send_buff, "sent", sizeof(char)*6);
+	// send_buff[0] = "sent";	
+
+	UDPConn* conn = udpconn_new("10.100.23.253", 9999);
 	char rcv_buff[100];;
 
 	
-	UDPConn* conn = udpconn_new("10.100.23.253", 9999);
 
 	udpconn_send(conn, "START");
 	udpconn_send(conn, "GET");
