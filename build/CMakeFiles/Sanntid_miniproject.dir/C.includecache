@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/../miniproject-files/network/udp.h
+arpa/inet.h
+-
+
+/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c
+../miniproject-files/network/udp.h
+/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/../miniproject-files/network/udp.h
+stdio.h
+-
+stdlib.h
+-
+pthread.h
+-
+sys/types.h
+-
+
