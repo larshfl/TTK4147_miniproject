@@ -4,6 +4,7 @@
 #include <pthread.h>
 #include <string.h>
 #include <sys/types.h>
+#include <time.h>
 
 
 #define true	(1)
@@ -72,32 +73,41 @@ int main(){
 	memcpy( send_buff, "SET:", sizeof(char)*4);
 	// send_buff[0] = "sent";	
 
-	UDPConn* conn = udpconn_new("10.100.23.253", 9999);
-	char rcv_buff[100];;
+	// Remember that the DHCP can change the IP of the computers
+	UDPConn* conn = udpconn_new("10.100.23.219", 9999);
+	char rcv_buff[100];
 
 	
-		printf("START_DATA\n"); 
-
-
+	printf("START_DATA\n"); 
 	udpconn_send(conn, "START");
 	udpconn_send(conn, "GET");
 	printf("Q\n");
+
+	int i;	
+	for(i = 0; i < 100; i++){
+		printf("\n");
+	}
 	udpconn_receive(conn,rcv_buff,buflen);
 
-	double ref = 0;
-	double I = 0;
 	
-	double Kp = 10;
-	double Ki = 800;
-	double Kd = 0.0007;
-
+	double ref = 1;
+	double I = 0;
+	double Kp = 0.5;
+	double Ki = 1600;
+	double Kd = 0;
 	double y,P,dt, oldT, y_old = 0;
-	double u; 
+	double u, error, prev_error, D; 
 
+
+	struct timespec starttime, time;
+	clock_gettime(CLOCK_REALTIME, &starttime);
 		
 	while(1) {
 
-		
+		clock_gettime(CLOCK_REALTIME, &time);
+		if(time.tv_sec-starttime.tv_sec > 1){
+			ref = 0;
+    }
 
 		udpconn_send(conn, "GET");
 	
@@ -105,40 +115,40 @@ int main(){
 		udpconn_receive(conn,rcv_buff,buflen);
 		
 		y = atof(rcv_buff + 8);
-		printf("rcv buff: %s \n", rcv_buff);  
-		P = y;
-		I+= (y*dt);
+		error = ref - y;
+		P = error;		
+		I += error*dt;
+		D = (error - prev_error)/dt;
+		prev_error = error;	
+
+
+
+/*
+		P = ref - y;
+		I+= (ref - y) * dt;
 		u = P*Kp + (I*Ki) + (y - y_old)/SLEEP_TIME_S*Kd;
 		y_old = y; 
+*/
+		u = Kp*error + Ki*I + Kd*D;
+		// printf("P: %f I: %f D: %f u: %f \n", P, I, D, u);
 
 
-		snprintf(send_buff+4, 100, "%lf", (-u));
-		printf("send_buff: %s\n", send_buff); 
+		snprintf(send_buff+4, 100, "%lf",u); 
 		udpconn_send(conn, send_buff);
-		printf("y: %lf\n", y); 
-		printf("P: %lf\n",P); 
-		printf("I: %lf\n",I);
-		printf("u: %lf\n",u);  
-		usleep((int)(SLEEP_TIME_S*1000*1000*5)); 
-
-		
-//		char cp[] = "123.34";
-//		double t =  atof(cp + 1);
-	//	printf("s2d: %lf \n", t);
-	//	snprintf(send_buff, 100, "%lf", t);
-	//	printf("string buffer %s \n",cp);
-		
-	// reguler 
-
-		//send
+		usleep((int)(SLEEP_TIME_S*1000*1000*1)); 
 		
 
-		//printf("h \n");
-		//udpconn_send(conn, send_buff);
+		if(time.tv_sec-starttime.tv_sec > 2){
+				udpconn_send(conn, "STOP");
+				break;
+		}
+			
+
 
 	}
 
-	//pthread_join(threadHandle, NULL);
+	printf("smulation finished \n");
+
 	return 0;
 
 }
