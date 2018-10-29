@@ -6,5 +6,5 @@ Inet_Address=$( ifconfig | grep  addr | python2 getInet.py)
 echo ${Inet_Address}
 echo ${Inet_Address} | python2 insertIP.py
 
-#gnome-terminal -x "minicom -D /dev/ttyS0"
+gnome-terminal -x "minicom -D /dev/ttyS0"
 
