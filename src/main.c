@@ -67,27 +67,28 @@ void* fn(void* args){
 int main(){
 
 
-
+	int i; 
 	char send_buff[100] = "sent";
 	int buflen = 100;
 	memcpy( send_buff, "SET:", sizeof(char)*4);
 	// send_buff[0] = "sent";	
 
 	// Remember that the DHCP can change the IP of the computers
-	UDPConn* conn = udpconn_new("10.100.23.219", 9999);
+	UDPConn* conn = udpconn_new("10.100.23.253", 9999);
 	char rcv_buff[100];
 
-	
+	for(i = 0; i < 100; i++){
+		printf("\n");
+	}
 	printf("START_DATA\n"); 
 	udpconn_send(conn, "START");
 	udpconn_send(conn, "GET");
 	printf("Q\n");
 
-	int i;	
-	for(i = 0; i < 100; i++){
-		printf("\n");
-	}
+
+
 	udpconn_receive(conn,rcv_buff,buflen);
+	printf("Received\n"); 
 
 	
 	double ref = 1;
