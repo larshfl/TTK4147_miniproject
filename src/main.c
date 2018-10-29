@@ -10,7 +10,7 @@
 #define true	(1)
 #define false   (0)
 #define SLEEP_TIME_S (0.001)
-
+#define IP_ADDR "10.24.35.107"
 long str2long(char*s){
 	long out =0; 
 	int i;
