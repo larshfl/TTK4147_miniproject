@@ -21,6 +21,7 @@ double getDt();
 #define EPSILON (0)
 #define inEps(A) ( ! ( (A>EPSILON) || (A< -EPSILON)) )
 
+
 //#define VARIABLE_TIMER
 
 #endif //GLOBAL_HEADER_H

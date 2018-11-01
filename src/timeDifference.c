@@ -4,9 +4,14 @@
 #include "stdio.h"
 
 double _getVariableDt();
+
 double _lowPassDt();
 
 double getDt(){
+
+
+double getDt(){
+ 
 
     return SLEEP_TIME_S;
     //return _lowPassDt(); 
@@ -24,6 +29,7 @@ double _getVariableDt(){
 	 old_ns = new_ns;
 	 return out; 
 }
+
 
 double _lowPassDt(){
     static readCounter =0; 
