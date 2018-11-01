@@ -26,10 +26,10 @@
 
 // Regulator parameters
 
-	const double Kp = 0.5;
+	const double Kp = 0.2;
 	const double Ki = 1600;
 
-	const double Kd = 0.001;
+	const double Kd = 0.0001;
 double controll(double dt, double error);
 
 int ref;
@@ -134,14 +134,14 @@ void* controller(void* args){
 
 
 
-}
+    }
 
 
 	
 
 
 
-}
+
 
 
      
