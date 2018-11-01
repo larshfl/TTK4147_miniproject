@@ -3,10 +3,10 @@ from sys import stdin
 def main():
     for line in stdin: 
         IP = line.strip()
-    f= open("../src/main.c", "r")
+    f= open("../src/globalHeader.h", "r")
     lines = [i for i in f]
     f.close()
-    f = open("../src/main.c", "w")
+    f = open("../src/globalHeader.h", "w")
     for line in lines: 
         if "#define IP_ADDR" in line:
             f.write("#define IP_ADDR "+ '"'+IP+'"'+ "\n")
