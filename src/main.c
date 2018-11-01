@@ -20,8 +20,10 @@
 */
 
 // Regulator parameters
+
 	const double Kp = 0.5;
 	const double Ki = 1600;
+
 	const double Kd = 0.001;
 double controll(double dt, double error);
 
@@ -59,7 +61,8 @@ void* receive(void* args){
         }
         else{
             // Signal 
-            sem_post(&SIG_SEM); 
+            udpconn_send(conn, "SIGNAL_ACK");
+            //sem_post(&SIG_SEM); 
         }
 
         
@@ -67,7 +70,6 @@ void* receive(void* args){
 
 	return NULL;
 } 
-
 void* controller(void* args){
 
     int i; 
@@ -96,6 +98,7 @@ void* controller(void* args){
 	while(1) {
     
 
+
 	 double dt = getDt();
 	 printf("dt: %f \n", dt);
 	 error = ref -Y; 
@@ -111,10 +114,19 @@ void* controller(void* args){
 }
 
 
+	
+
+
+
+}
+
+
      
 
 	return NULL;
 } 
+
+
 
 double controll(double dt, double error){
         static double prev_error =0.0; 
@@ -130,7 +142,7 @@ double controll(double dt, double error){
 
 
 		double u = Kp*error + Ki*I + Kd*D;
-        // 
+
         return u; 
 }
 
@@ -141,7 +153,7 @@ void* signal(void* args){
     while(1){
         sem_wait(&SIG_SEM); 
         udpconn_send(conn, "SIGNAL_ACK");
-        printf("GOT IT\n");
+       // printf("GOT IT\n");
     }
 	return NULL;
 } 
@@ -162,13 +174,14 @@ int main(){
     pthread_t threadHandles[3];
     pthread_create(&threadHandles[0], NULL, receive, NULL);
     pthread_create(&threadHandles[1], NULL, controller, NULL);
-    pthread_create(&threadHandles[2], NULL, signal, NULL);
+   // pthread_create(&threadHandles[2], NULL, signal, NULL);
     
     ref = 1;
     usleep(1000*1000);
     ref = 0;
     usleep(1000*1000);
     UDPConn* conn = udpconn_new(IP_ADDR, 9999);
+    udpconn_send(conn, "SIGNAL_ACK");
     udpconn_send(conn, "STOP");
     
      
