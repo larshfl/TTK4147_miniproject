@@ -6,14 +6,9 @@
 #include <sys/types.h>
 #include <time.h>
 #include <semaphore.h>
+#include "timeDifference.h"
+#include "globalHeader.h"
 
-#define true	(1)
-#define false   (0)
-#define SLEEP_TIME_S (0.001)
-#define IP_ADDR "10.100.23.244"
-#define S_TO_US 1000*1000
-
-#define EPSILON (0)
 
 /*
 
@@ -72,21 +67,7 @@ void* receive(void* args){
 
 	return NULL;
 } 
-double getDt(){
-    /*
-    static long old_ns; 
-    long new_ns; 
-    struct timespec currentTime;
-     clock_gettime(CLOCK_REALTIME, &currentTime);
-	 new_ns = currentTime.tv_nsec; 	
-	 //printf("dt: %f %ld, %ld \n",(new_ns - old_ns)/(1000*1000*1000.0), new_ns,  old_ns);
-	 double out = (new_ns - old_ns)/(1000*1000*1000.0);
-	 old_ns = new_ns;*/
-	 return SLEEP_TIME_S;
-	 //return out; 
 
-
-}
 void* controller(void* args){
 
     int i; 
