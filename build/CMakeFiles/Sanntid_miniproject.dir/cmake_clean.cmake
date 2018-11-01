@@ -1,6 +1,6 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.o"
-  "CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.o"
+  "CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/src/main.c.o"
+  "CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/miniproject-files/network/udp.c.o"
   "Sanntid_miniproject/Sanntid_miniproject.pdb"
   "Sanntid_miniproject/Sanntid_miniproject"
 )

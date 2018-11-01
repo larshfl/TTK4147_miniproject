@@ -1,4 +1,4 @@
-# Install script for directory: /home/student/Desktop/jorn_og_lars/TTK4147_miniproject/build
+# Install script for directory: /home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/build
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/build/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/build/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)

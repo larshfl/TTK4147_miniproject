@@ -36,10 +36,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/student/Desktop/jorn_og_lars/TTK4147_miniproject/build
+CMAKE_SOURCE_DIR = /home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/build
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/student/Desktop/jorn_og_lars/TTK4147_miniproject/build
+CMAKE_BINARY_DIR = /home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -66,9 +66,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/Desktop/jorn_og_lars/TTK4147_miniproject/build/CMakeFiles /home/student/Desktop/jorn_og_lars/TTK4147_miniproject/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/build/CMakeFiles /home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/Desktop/jorn_og_lars/TTK4147_miniproject/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -108,53 +108,53 @@ Sanntid_miniproject/fast:
 	$(MAKE) -f CMakeFiles/Sanntid_miniproject.dir/build.make CMakeFiles/Sanntid_miniproject.dir/build
 .PHONY : Sanntid_miniproject/fast
 
-home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.o: home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.o
-.PHONY : home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.o
+home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/miniproject-files/network/udp.o: home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/miniproject-files/network/udp.c.o
+.PHONY : home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/miniproject-files/network/udp.o
 
 # target to build an object file
-home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.o:
-	$(MAKE) -f CMakeFiles/Sanntid_miniproject.dir/build.make CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.o
-.PHONY : home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.o
+home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/miniproject-files/network/udp.c.o:
+	$(MAKE) -f CMakeFiles/Sanntid_miniproject.dir/build.make CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/miniproject-files/network/udp.c.o
+.PHONY : home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/miniproject-files/network/udp.c.o
 
-home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.i: home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.i
-.PHONY : home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.i
+home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/miniproject-files/network/udp.i: home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/miniproject-files/network/udp.c.i
+.PHONY : home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/miniproject-files/network/udp.i
 
 # target to preprocess a source file
-home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.i:
-	$(MAKE) -f CMakeFiles/Sanntid_miniproject.dir/build.make CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.i
-.PHONY : home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.i
+home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/miniproject-files/network/udp.c.i:
+	$(MAKE) -f CMakeFiles/Sanntid_miniproject.dir/build.make CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/miniproject-files/network/udp.c.i
+.PHONY : home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/miniproject-files/network/udp.c.i
 
-home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.s: home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.s
-.PHONY : home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.s
+home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/miniproject-files/network/udp.s: home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/miniproject-files/network/udp.c.s
+.PHONY : home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/miniproject-files/network/udp.s
 
 # target to generate assembly for a file
-home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.s:
-	$(MAKE) -f CMakeFiles/Sanntid_miniproject.dir/build.make CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.s
-.PHONY : home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.c.s
+home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/miniproject-files/network/udp.c.s:
+	$(MAKE) -f CMakeFiles/Sanntid_miniproject.dir/build.make CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/miniproject-files/network/udp.c.s
+.PHONY : home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/miniproject-files/network/udp.c.s
 
-home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.o: home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.o
-.PHONY : home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.o
+home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/src/main.o: home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/src/main.c.o
+.PHONY : home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/src/main.o
 
 # target to build an object file
-home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.o:
-	$(MAKE) -f CMakeFiles/Sanntid_miniproject.dir/build.make CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.o
-.PHONY : home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.o
+home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/src/main.c.o:
+	$(MAKE) -f CMakeFiles/Sanntid_miniproject.dir/build.make CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/src/main.c.o
+.PHONY : home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/src/main.c.o
 
-home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.i: home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.i
-.PHONY : home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.i
+home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/src/main.i: home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/src/main.c.i
+.PHONY : home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/src/main.i
 
 # target to preprocess a source file
-home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.i:
-	$(MAKE) -f CMakeFiles/Sanntid_miniproject.dir/build.make CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.i
-.PHONY : home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.i
+home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/src/main.c.i:
+	$(MAKE) -f CMakeFiles/Sanntid_miniproject.dir/build.make CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/src/main.c.i
+.PHONY : home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/src/main.c.i
 
-home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.s: home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.s
-.PHONY : home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.s
+home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/src/main.s: home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/src/main.c.s
+.PHONY : home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/src/main.s
 
 # target to generate assembly for a file
-home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.s:
-	$(MAKE) -f CMakeFiles/Sanntid_miniproject.dir/build.make CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.s
-.PHONY : home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c.s
+home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/src/main.c.s:
+	$(MAKE) -f CMakeFiles/Sanntid_miniproject.dir/build.make CMakeFiles/Sanntid_miniproject.dir/home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/src/main.c.s
+.PHONY : home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/src/main.c.s
 
 # Help Target
 help:
@@ -165,12 +165,12 @@ help:
 	@echo "... Sanntid_miniproject"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.o"
-	@echo "... home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.i"
-	@echo "... home/student/Desktop/jorn_og_lars/TTK4147_miniproject/miniproject-files/network/udp.s"
-	@echo "... home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.o"
-	@echo "... home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.i"
-	@echo "... home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.s"
+	@echo "... home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/miniproject-files/network/udp.o"
+	@echo "... home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/miniproject-files/network/udp.i"
+	@echo "... home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/miniproject-files/network/udp.s"
+	@echo "... home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/src/main.o"
+	@echo "... home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/src/main.i"
+	@echo "... home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/src/main.s"
 .PHONY : help
 
 
