@@ -63,3 +63,5 @@ build/Makefile
 
 src/main.c~
 utilities/OUTPUT_DATA
+utilities/plot5.png
+utilities/results.dat
