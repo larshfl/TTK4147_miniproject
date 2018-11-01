@@ -105,7 +105,7 @@ void* controller(void* args){
 
 
 	 double dt = getDt();
-	 printf("dt: %f \n", dt);
+//	 printf("dt: %f \n", dt);
 	 error = ref -Y; 
 	 u = controll( dt,  error);
 	 
@@ -158,7 +158,7 @@ void* signal(void* args){
     while(1){
         sem_wait(&SIG_SEM); 
         udpconn_send(conn, "SIGNAL_ACK");
-       // printf("GOT IT\n");
+         printf("GOT IT\n");
     }
 	return NULL;
 } 

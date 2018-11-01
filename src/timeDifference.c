@@ -33,15 +33,27 @@ double _getVariableDt(){
 double _lowPassDt(){
     static readCounter =0; 
     static double out = SLEEP_TIME_S; 
-    const double tau = 0.006; 
+    const double tau = 0.06; 
     double change = out;
     
-    if( ++readCounter == 5){
-         change = _getVariableDt() /10;
-         readCounter =0;  
+
+    
+    static int counter = 20; 
+    if( counter -- ==0){
+        counter =20; 
+        change = _getVariableDt()/20; 
+        printf("change: %f\n", change);
+        if(change <= 0){
+            change = out; 
+        }
+        
+    }
+    else{
+        change = out; 
     }
 
-    out = (1-tau)*out + tau*change; 
+    out = (1.0-tau)*out + tau*change; 
+    printf("dt: %f \n", out);
     return out; 
 
 
