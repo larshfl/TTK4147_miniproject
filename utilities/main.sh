@@ -10,13 +10,17 @@ cd ../miniproject-files
 
 echo "Starting server"
 ./miniproject-server
-cp /export/nfs/OUTPUT.txt ../utilities/BOARD_DATA.txt
+
 
 rm plot5.png
 gnuplot plot5
 feh plot5.png
 cd ../utilities
-cat BOARD_DATA.txt | translate_to_plotable.py > results.dat
+cp /export/nfs/OUTPUT.txt BOARD_DATA.txt
+#cat BOARD_DATA.txt | python translate_to_plotable.py > results.dat
+cat BOARD_DATA.txt | python translate_to_plotable.py > results.dat
+
 gnuplot testGnuplot
+feh plot5.png
 echo "Finished main.sh!"
 

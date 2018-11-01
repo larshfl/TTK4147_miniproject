@@ -26,8 +26,8 @@
 
 	//const double Kd = -0.0003;
 
-	const double Kp = 3;
-	const double Ki = 4500;
+	const double Kp = 9;
+	const double Ki = 5000;
 
 	const double Kd = 0.0035;
 

@@ -7,13 +7,12 @@ double _getVariableDt();
 
 double _lowPassDt();
 
-double getDt(){
 
 
 double getDt(){
  
 
-    return SLEEP_TIME_S;
+   return SLEEP_TIME_S;
     //return _lowPassDt(); 
 
 }
