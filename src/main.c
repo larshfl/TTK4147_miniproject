@@ -128,43 +128,9 @@ void* controller(void* args){
 
 
 }
-/*
-
-        y = Y; 
- //       printf("y: %lf\n", y); 
-	
-	    clock_gettime(CLOCK_REALTIME, &currentTime);
-	    new_ns = currentTime.tv_nsec; 
-		dt = (new_ns - old_ns) / (1000.0);
-        old_ns = new_ns;  
-
-		
-		printf("dt: %f ,%ld, %ld \n", dt, new_ns,  old_ns);
-		//printf("dt: %f \n", dt); 
-       // y form other
-		error = ref - y;
-		P = error;		
-		I += (error*dt)/(1000.0*1000);
-		D = (error - prev_error)/dt;
-		
-		// printf("P: %lf, I:  %lf, D:  %lf\n", P,I,D);
-		prev_error = error;	
 
 
-
-		u = Kp*error + Ki*I + Kd*D;
-		// printf("P: %f I: %f D: %f u: %f \n", P, I, D, u);
-
-
-		snprintf(send_buff+4, 100, "%lf",u); 
-		udpconn_send(conn, send_buff);
-		usleep((int)(SLEEP_TIME_S*S_TO_US)); 
-		
-
-
-
-	}
-*/
+     
 
 	return NULL;
 } 
