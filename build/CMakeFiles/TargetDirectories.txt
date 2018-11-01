@@ -1,1 +1,1 @@
-/home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/build/CMakeFiles/Sanntid_miniproject.dir
+/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/build/CMakeFiles/Sanntid_miniproject.dir

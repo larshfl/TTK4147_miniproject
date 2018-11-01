@@ -21,10 +21,16 @@
 
 // Regulator parameters
 
-	const double Kp = 0.2;
-	const double Ki = 1600;
+	 //const double Kp = 0.5;
+	//const double Ki = 1600;
 
-	const double Kd = 0.0001;
+	//const double Kd = -0.0003;
+
+	const double Kp = 7;
+	const double Ki = 4500;
+
+	const double Kd = 0.0035;
+
 double controll(double dt, double error);
 
 int ref;
@@ -76,10 +82,9 @@ void* controller(void* args){
 	char send_buff[100] = "sent";
 	int buflen = 100;
 	memcpy( send_buff, "SET:", sizeof(char)*4);
-	struct timespec currentTime;
     long old_ns, new_ns; 
-    clock_gettime(CLOCK_REALTIME, &currentTime);
-    old_ns =  currentTime.tv_nsec; 
+
+
 	// Remember that the DHCP can change the IP of the computers
 	UDPConn* conn = udpconn_new(IP_ADDR, 9999);
 

@@ -6,13 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/src/../miniproject-files/network/udp.h
+/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/../miniproject-files/network/udp.h
 arpa/inet.h
 -
 
-/home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/src/main.c
+/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/globalHeader.h
+
+/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/main.c
 ../miniproject-files/network/udp.h
-/home/student/Desktop/jorn_lars_sanntid/TTK4147_miniproject/src/../miniproject-files/network/udp.h
+/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/../miniproject-files/network/udp.h
 stdio.h
 -
 stdlib.h
@@ -27,4 +29,10 @@ time.h
 -
 semaphore.h
 -
+timeDifference.h
+/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/timeDifference.h
+globalHeader.h
+/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/globalHeader.h
+
+/home/student/Desktop/jorn_og_lars/TTK4147_miniproject/src/timeDifference.h
 
