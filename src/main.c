@@ -13,7 +13,7 @@
 #define IP_ADDR "10.100.23.244"
 #define S_TO_US 1000*1000
 
-
+#define EPSILON (0)
 
 /*
 
@@ -24,10 +24,14 @@
 
 */
 
+// Regulator parameters
+	const double Kp = 0.5;
+	const double Ki = 1600;
+	const double Kd = 0.001;
+double controll(double dt, double error);
 
-
-int REF;
-
+int ref;
+int* signal_shared;
 
 double Y; 
 double SIG; 
@@ -68,15 +72,31 @@ void* receive(void* args){
 
 	return NULL;
 } 
+double getDt(){
+    /*
+    static long old_ns; 
+    long new_ns; 
+    struct timespec currentTime;
+     clock_gettime(CLOCK_REALTIME, &currentTime);
+	 new_ns = currentTime.tv_nsec; 	
+	 //printf("dt: %f %ld, %ld \n",(new_ns - old_ns)/(1000*1000*1000.0), new_ns,  old_ns);
+	 double out = (new_ns - old_ns)/(1000*1000*1000.0);
+	 old_ns = new_ns;*/
+	 return SLEEP_TIME_S;
+	 //return out; 
 
+
+}
 void* controller(void* args){
 
     int i; 
 	char send_buff[100] = "sent";
 	int buflen = 100;
 	memcpy( send_buff, "SET:", sizeof(char)*4);
-
-
+	struct timespec currentTime;
+    long old_ns, new_ns; 
+    clock_gettime(CLOCK_REALTIME, &currentTime);
+    old_ns =  currentTime.tv_nsec; 
 	// Remember that the DHCP can change the IP of the computers
 	UDPConn* conn = udpconn_new(IP_ADDR, 9999);
 
@@ -85,31 +105,49 @@ void* controller(void* args){
 
 	
 
-	double I = 0;
-	double Kp = 0.1;
-	double Ki = 1600;
-	double Kd = 0;
-	double y,P,dt, oldT, y_old = 0;
-	double u, error, prev_error, D; 
+
+	double y;
+	double u, error; 
 
 
 
 		
 	while(1) {
+    
 
-		//clock_gettime(CLOCK_REALTIME, &time);
+	 double dt = getDt();
+	 printf("dt: %f \n", dt);
+	 error = ref -Y; 
+	 u = controll( dt,  error);
+	 
+	 snprintf(send_buff+4, 100, "%lf",u); 
+     udpconn_send(conn, send_buff);
+	 usleep((int)(SLEEP_TIME_S*S_TO_US)); 
+		
 
+
+
+}
+/*
 
         y = Y; 
-        printf("%lf\n", y); 
+ //       printf("y: %lf\n", y); 
 	
-		dt = SLEEP_TIME_S; 
+	    clock_gettime(CLOCK_REALTIME, &currentTime);
+	    new_ns = currentTime.tv_nsec; 
+		dt = (new_ns - old_ns) / (1000.0);
+        old_ns = new_ns;  
+
 		
+		printf("dt: %f ,%ld, %ld \n", dt, new_ns,  old_ns);
+		//printf("dt: %f \n", dt); 
        // y form other
-		error = REF - y;
+		error = ref - y;
 		P = error;		
-		I += error*dt;
+		I += (error*dt)/(1000.0*1000);
 		D = (error - prev_error)/dt;
+		
+		// printf("P: %lf, I:  %lf, D:  %lf\n", P,I,D);
 		prev_error = error;	
 
 
@@ -126,11 +164,28 @@ void* controller(void* args){
 
 
 	}
-
+*/
 
 	return NULL;
 } 
 
+double controll(double dt, double error){
+        static double prev_error =0.0; 
+        static double I =0.0; 
+        
+        double P = error;		
+		I += (error*dt);
+		double D = (error - prev_error)/dt;
+		
+		// printf("P: %lf, I:  %lf, D:  %lf\n", P,I,D);
+		prev_error = error;	
+
+
+
+		double u = Kp*error + Ki*I + Kd*D;
+        // 
+        return u; 
+}
 
 
 
@@ -162,9 +217,9 @@ int main(){
     pthread_create(&threadHandles[1], NULL, controller, NULL);
     pthread_create(&threadHandles[2], NULL, signal, NULL);
     
-    REF = 1;
+    ref = 1;
     usleep(1000*1000);
-    REF = 0;
+    ref = 0;
     usleep(1000*1000);
     UDPConn* conn = udpconn_new(IP_ADDR, 9999);
     udpconn_send(conn, "STOP");
@@ -177,10 +232,4 @@ int main(){
 	return 0;
 
 }
-
-
-
-
-
-
 
