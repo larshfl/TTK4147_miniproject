@@ -25,8 +25,10 @@
 */
 
 // Regulator parameters
-	const double Kp = 10;
-	const double Ki = 1200.0;
+
+	const double Kp = 0.5;
+	const double Ki = 1600;
+
 	const double Kd = 0.001;
 double controll(double dt, double error);
 
@@ -74,7 +76,7 @@ void* receive(void* args){
 	return NULL;
 } 
 double getDt(){
-    
+
     static long old_ns; 
     long new_ns; 
     struct timespec currentTime;
@@ -82,10 +84,12 @@ double getDt(){
 	 new_ns = currentTime.tv_nsec; 	
 	 //printf("dt: %f %ld, %ld \n",(new_ns - old_ns)/(1000*1000*1000.0), new_ns,  old_ns);
 	 double out = (new_ns - old_ns)/(1000*1000*1000.0);
+
 	// printf("Out: %f\n", out); 
 	 old_ns = new_ns;  
 	 return (SLEEP_TIME_S + out) / 2;
 	 //return out; 
+
 
 
 }
@@ -117,6 +121,7 @@ void* controller(void* args){
 	while(1) {
     
 
+
 	 double dt = getDt();
 	 printf("dt: %f \n", dt);
 	 error = ref -Y; 
@@ -130,46 +135,21 @@ void* controller(void* args){
 
 
 }
-/*
 
-        y = Y; 
- //       printf("y: %lf\n", y); 
+
 	
-	    clock_gettime(CLOCK_REALTIME, &currentTime);
-	    new_ns = currentTime.tv_nsec; 
-		dt = (new_ns - old_ns) / (1000.0);
-        old_ns = new_ns;  
-
-		
-		printf("dt: %f ,%ld, %ld \n", dt, new_ns,  old_ns);
-		//printf("dt: %f \n", dt); 
-       // y form other
-		error = ref - y;
-		P = error;		
-		I += (error*dt)/(1000.0*1000);
-		D = (error - prev_error)/dt;
-		
-		// printf("P: %lf, I:  %lf, D:  %lf\n", P,I,D);
-		prev_error = error;	
 
 
 
-		u = Kp*error + Ki*I + Kd*D;
-		// printf("P: %f I: %f D: %f u: %f \n", P, I, D, u);
+}
 
 
-		snprintf(send_buff+4, 100, "%lf",u); 
-		udpconn_send(conn, send_buff);
-		usleep((int)(SLEEP_TIME_S*S_TO_US)); 
-		
-
-
-
-	}
-*/
+     
 
 	return NULL;
 } 
+
+
 
 double controll(double dt, double error){
         static double prev_error =0.0; 
@@ -185,7 +165,7 @@ double controll(double dt, double error){
 
 
 		double u = Kp*error + Ki*I + Kd*D;
-        // 
+
         return u; 
 }
 
@@ -235,10 +215,4 @@ int main(){
 	return 0;
 
 }
-
-
-
-
-
-
 
