@@ -26,8 +26,8 @@
 
 
 
-int ref;
-int* signal_shared;
+int REF;
+
 
 double Y; 
 double SIG; 
@@ -106,7 +106,7 @@ void* controller(void* args){
 		dt = SLEEP_TIME_S; 
 		
        // y form other
-		error = ref - y;
+		error = REF - y;
 		P = error;		
 		I += error*dt;
 		D = (error - prev_error)/dt;
@@ -162,9 +162,9 @@ int main(){
     pthread_create(&threadHandles[1], NULL, controller, NULL);
     pthread_create(&threadHandles[2], NULL, signal, NULL);
     
-    ref = 1;
+    REF = 1;
     usleep(1000*1000);
-    ref = 0;
+    REF = 0;
     usleep(1000*1000);
     UDPConn* conn = udpconn_new(IP_ADDR, 9999);
     udpconn_send(conn, "STOP");
