@@ -4,7 +4,7 @@
 
 double getDt();
 
-void wait_us(int sleepTime_us); // A sleep that can be changed
+void wait_ms(int sleepTime_ms); // A sleep that can be changed
 
 
 

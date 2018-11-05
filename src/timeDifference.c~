@@ -8,7 +8,7 @@ double _getVariableDt();
 double _lowPassDt();
 
 
-void wait_us(int sleepTime_us){
+void wait_ms(int sleepTime_ms){
     usleep(sleepTime_ms); 
 
 }

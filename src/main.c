@@ -111,7 +111,7 @@ void* controller(void* args){
 	 
 	 snprintf(send_buff+4, 100, "%lf",u); 
      udpconn_send(conn, send_buff);
-	 usleep((int)(SLEEP_TIME_S*S_TO_US)); 
+	 wait_us((int)(SLEEP_TIME_S*S_TO_US)); 
 		
 
 
