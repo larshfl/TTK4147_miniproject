@@ -24,7 +24,7 @@ void timeDifference_init(){
 double timeDifference_getDt(){
  
 
-   //return CONTROLLER_PERIOD_S;
+    //return INITIAL_DT_ESTIMATE;
     //return _getVariableDt(); 
     return _lowPassDt(); 
 

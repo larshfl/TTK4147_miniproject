@@ -47,9 +47,9 @@ int main(){
     pthread_create(&threadHandles[1], NULL, controller_main, NULL);
     
     REF = 1;
-    usleep(1000*10000);
+    usleep(1000*1000);
     REF = 0;
-    usleep(1000*10000);
+    usleep(1000*1000);
 
     udpconn_send(CONN, "SIGNAL_ACK");
     udpconn_send(CONN, "STOP");
