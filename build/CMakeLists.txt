@@ -3,14 +3,15 @@ cmake_minimum_required (VERSION 2.8)
 project(Sanntid_miniproject)
 
 include_directories (../src/ )
+include_directories (../src/workers )
 include_directories (../miniproject-files/network/ )
 set(CMAKE_C_COMPILER /home/student/Desktop/buildroot/output/staging/usr/bin/avr32-linux-gcc-4.2.4)
 
 #set(CMAKE_C_COMPILER gcc )
 
 
-file (GLOB_RECURSE PROJECT_HEADERS ../src/*.h  ../miniproject-files/network/*.h)
-file (GLOB_RECURSE PROJECT_SOURCES ../src/*.c  ../miniproject-files/network/*.c)
+file (GLOB_RECURSE PROJECT_HEADERS ../src/*.h  ../srs/workers/*.h ../miniproject-files/network/*.h)
+file (GLOB_RECURSE PROJECT_SOURCES ../src/*.c  ../srs/workers/*.c ../miniproject-files/network/*.c)
 file (GLOB         PROJECT_CONFIGS CMakeLists.txt
                                   .gitmodules)
 
