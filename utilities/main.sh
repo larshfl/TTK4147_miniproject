@@ -1,4 +1,5 @@
 echo "Start"
+
 cd ../build/
 cmake . && \
 make && \
