@@ -9,27 +9,17 @@
 #include "timeDifference.h"
 #include "globalHeader.h"
 #include "sharedVariables.h"
-//UDPConn* CONN; 
-/*
-
-- tune regulator?
-- skrive rapport
-- prioritet eller kernel moduler?
 
 
-*/
-
-
-double Y; 
-pthread_mutex_t Y_LOCK; 
-
+// Actual global variables
+float Y; 
 UDPConn* CONN; 
-double REF; 
+float REF; 
 
 
 
 
-
+// Worker functions from ./main_workers/
 void* receiver_main(void* args); 
 void* controller_main(void* args); 
 

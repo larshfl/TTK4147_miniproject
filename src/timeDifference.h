@@ -2,7 +2,7 @@
 #define TIME_DIFFERENCE_H
 
 
-double timeDifference_getDt();
+double timeDifference_getDt_s();
 
 void timeDifference_wait_us(int sleepTime_us); // A sleep that can be changed
 
